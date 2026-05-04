@@ -34,7 +34,7 @@ export default {
     { evaluate: `
         (() => {
           const now = new Date();
-          const cutoff = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+          const cutoff = new Date(now.getTime() - \${{ args.days }} * 24 * 60 * 60 * 1000);
           const articles = document.querySelectorAll('article');
           const results = [];
           for (const art of articles) {

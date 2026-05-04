@@ -1,10 +1,10 @@
 export default {
-  description: 'Fetch recent OpenAI Engineering articles from the OpenAI news feed.',
+  description: 'Fetch OpenAI news articles from the OpenAI news feed, defaulting to the Engineering category.',
   args: [
     { name: 'category', default: 'Engineering', description: 'Category filter, comma-separated (e.g., "Research,Engineering").' },
     { name: 'days', default: 7, description: 'Days to look back when no date range specified.' },
-    { name: 'startDate', default: '', description: 'Start date YYYY-MM-DD. Overrides days.' },
-    { name: 'endDate', default: '', description: 'End date YYYY-MM-DD. Overrides days.' },
+    { name: 'startDate', default: '', description: 'Start date YYYY-MM-DD. Provide both startDate and endDate to override days.' },
+    { name: 'endDate', default: '', description: 'End date YYYY-MM-DD. Provide both startDate and endDate to override days.' },
     { name: 'limit', default: 20, description: 'Maximum number of items to return.' },
   ],
   output: {
